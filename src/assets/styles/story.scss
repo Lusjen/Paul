@@ -1,0 +1,42 @@
+.story {
+	&__img {
+		padding: 0px 0 60px;
+		@include to(1200px) {
+			padding: 0px 0 30px;
+		}
+	}
+	&__img-in {
+		max-width: 625px;
+		margin: 0 auto;
+		@include to(1200px) {
+			max-width: 496px;
+		}
+	}
+	&__title {
+		text-align: center;
+	}
+	&__info {
+		max-width: 580px;
+		margin: 0 auto;
+		text-align: center;
+		@include to(767px) {
+			padding: 0 10px;
+		}
+	}
+	&__subtitle {
+		margin-bottom: 28px;
+	}
+	&__text {
+		margin-bottom: 30px;
+	}
+	&__link {
+	    max-width: 192px;
+	    margin: 50px auto 120px;
+	    @include to(1200px) {
+	    	margin: 50px auto 67px;
+	    }
+	    @include to(1200px) {
+	    	margin: 18px auto 80px;
+	    }
+	}
+}

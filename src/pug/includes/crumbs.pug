@@ -1,0 +1,5 @@
+ul(class="breadcrumb")
+	each val in crumbs
+		li
+			a(href= val.link class="hover-color")= val.title
+	li= titlePage

@@ -1,0 +1,254 @@
+extends ../layout/main
+block variable
+	-
+		var catSlaider = [	
+			{ 
+				img: './assets/images/home/cat-1.png',
+				title: 'VODA UA у пластиковій пляшці',
+				type: 'негазована 1,5л',
+				price: '₴ 12.00',
+				link: "#"
+			},
+			{ 
+				img: './assets/images/home/cat-2.png',
+				title: 'VODA UA у скляній пляшці',
+				type: 'газована 0,5л',
+				price: '₴ 16.00',
+				link: "#"
+			},
+			{ 
+				img: './assets/images/home/cat-3.png',
+				title: 'VODA UA у скляній пляшці',
+				type: 'негазована 0,5л',
+				price: '₴ 16.00',
+				link: "#"
+			},
+			{ 
+				img: './assets/images/home/cat-1.png',
+				title: 'тест',
+				type: 'тест',
+				price: 'тест',
+				link: "#"
+			},
+		];
+	
+block meta
+	title= 'Home'
+	meta(name='description', content='')
+block head
+		link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+	script(src='./assets/scripts/index.js')
+	script(src='./assets/scripts/main.js')
+block content
+	// begin main-slider
+	.main-slider
+		.main-slider__in.js-main-slider
+			.main-slider__item
+				.main-slider__item-in
+					.main-slider__img
+						img(src="./assets/images/slider-main/1.png", alt="")
+					h1.main-slider__name.wow.fadeInUp(data-wow-duration="1s") Let there always be PAUL Patisseries
+					.main-slider__link.wow.fadeInUp(data-wow-duration="1.5s")
+						a(href="/").link-light ENJOY AT HOME
+			.main-slider__item
+				.main-slider__item-in
+					.main-slider__img
+						img(src="./assets/images/slider-main/1.png", alt="")
+					h1.main-slider__name.wow.fadeInUp(data-wow-duration="1s") Let there always be PAUL Patisseries
+					.main-slider__link.wow.fadeInUp(data-wow-duration="1.5s")
+						a(href="/").link-light ENJOY AT HOME
+			.main-slider__item
+				.main-slider__item-in
+					.main-slider__img
+						img(src="./assets/images/slider-main/1.png", alt="")
+					h1.main-slider__name Let there always be PAUL Patisseries
+					.main-slider__link
+						a(href="/").link-light ENJOY AT HOME
+	// end main-slider
+	// begin bakery
+	.bakery
+		.bakery__in
+			.bakery__img
+				img(src="https://www.paul-uk.com/media/wysiwyg/DeliveryVan_Website_morepostcodes.gif" alt="Welcome to PAUL UK online" title="" data-element="desktop_image")
+			.bakery__info
+				.bakery__title.title-md.title-md_before.wow.fadeInUp(data-wow-duration="1s") Welcome to your local bakery online
+				.bakery__text.text.wow.fadeInUp(data-wow-duration="1s") 
+					p We're so excited to have launched our At Home range which is available for delivery to a variety of postcodes, find out more here. The range includes useful.
+				a(href="").link-dark.bakery__link shop
+	// end bakery
+	// begin products
+	.products
+		.products__in
+			.products__info
+				.products__title.title-md.title-md_before.wow.fadeInUp(data-wow-duration="1s") Our New Products
+				.products__text.text.wow.fadeInUp(data-wow-duration="1s")
+					p Famous around the world, the combination of dark chocolate sponge, cherries, cherry liqueur and cream never fails to please. A great dessert, tea time.
+				a(href="/").link-dark.products__link shop
+			.products__slider
+				.products-slider.js-products-slider
+					a(href="/").products-slider__item
+						.products-slider__img
+							.products-slider__line
+							.products-slider__title New
+							.products-slider__img-in
+								img(src="./assets/images/slider-products/1.png", alt="")
+						.products-slider__info
+							.products-slider__name Croissant
+							.products-slider__price 59 <span>$</span>
+					a(href="/").products-slider__item
+						.products-slider__img
+							.products-slider__line
+							.products-slider__title New
+							.products-slider__img-in
+								img(src="./assets/images/slider-products/2.png", alt="")
+						.products-slider__info
+							.products-slider__name Croissant
+							.products-slider__price 59 <span>$</span>
+					a(href="/").products-slider__item
+						.products-slider__img
+							.products-slider__line
+							.products-slider__title New
+							.products-slider__img-in
+								img(src="./assets/images/slider-products/3.png", alt="")
+						.products-slider__info
+							.products-slider__name Croissant
+							.products-slider__price 59 <span>$</span>
+
+					a(href="/").products-slider__item
+						.products-slider__img
+							.products-slider__line
+							.products-slider__title New
+							.products-slider__img-in
+								img(src="./assets/images/slider-products/3.png", alt="")
+						.products-slider__info
+							.products-slider__name Croissant
+							.products-slider__price 59 <span>$</span>
+				.products-slider__btns.slider-btns
+					a(class="slider-btns__item js-arrow-prev")
+						+svg('arrow-prev')
+					a(class="slider-btns__item js-arrow-next")
+						+svg('arrow-next')
+	// end products
+	// begin products-menu
+	.products-menu
+		.products-menu__in
+			.products-menu__title
+				.title-md Menu
+			.products-menu__gallery
+				.gallery-products.js-gallery-products
+					//begin gallery-products__item
+					.gallery-products__item
+						.menu-item.wow.fadeIn(data-wow-duration="1s")
+							.menu-item__in
+								.menu-item__logo
+									img(src="./assets/images/logo-menu.svg", alt="")
+								.menu-item__title Breakfast
+								.menu-item__row
+									.menu-item__day Monday - Friday
+									.menu-item__time 8:00 - 12:00
+								.menu-item__row
+									.menu-item__day Saturday - SUNDAY
+									.menu-item__time 9:00 - 21:00
+								a(href="").menu-item__link view menu
+					//end gallery-products__item
+					//begin gallery-products__item
+					.gallery-products__item.wow.fadeIn(data-wow-duration="2s")
+						.menu-item
+							.menu-item__in
+								.menu-item__logo
+									img(src="./assets/images/logo-menu.svg", alt="")
+								.menu-item__title A la carte
+								.menu-item__row
+									.menu-item__day Monday - Friday
+									.menu-item__time 8:00 - 12:00
+								.menu-item__row
+									.menu-item__day Saturday - SUNDAY
+									.menu-item__time 9:00 - 21:00
+								a(href="").menu-item__link view menu
+					//end gallery-products__item
+					//begin gallery-products__item
+					.gallery-products__item.wow.fadeIn(data-wow-duration="3s")
+						.menu-item
+							.menu-item__in
+								.menu-item__logo
+									img(src="./assets/images/logo-menu.svg", alt="")
+								.menu-item__title Drinks
+								.menu-item__row
+									.menu-item__day Monday - Friday
+									.menu-item__time 8:00 - 12:00
+								.menu-item__row
+									.menu-item__day Saturday - SUNDAY
+									.menu-item__time 9:00 - 21:00
+								a(href="").menu-item__link view menu
+					//end gallery-products__item
+					//begin gallery-products__item
+					.gallery-products__item.gallery-products__item-last.wow.fadeIn(data-wow-duration="4s")
+						.menu-item-last
+							.menu-item-last__in
+								.menu-item-last__logo
+									img(src="./assets/images/logo-blue-round.svg", alt="")
+						//- img(src="./assets/images/logo-blue.png", alt="")
+					//end gallery-products__item
+				.gallery-products__btns.slider-btns
+					a(class="slider-btns__item js-arrow-menu-prev")
+						+svg('arrow-prev')
+					a(class="slider-btns__item js-arrow-menu-next")
+						+svg('arrow-next')
+	// end poducts-menu
+	// begin reserve
+	.reserve
+		.reserve__in
+			.reserve__img
+				img(src='./assets/images/reserve/bg.png')
+			.reserve__info
+				.reserve__title.title-md.title-md_before.wow.fadeInUp(data-wow-duration="1s") Reserve your table
+				.reserve__text.text.wow.fadeInUp(data-wow-duration="1s")
+					p We're so excited to have launched our At Home range which is available for delivery to a variety of postcodes, find out more here. The range includes useful essentials such as bread, vegetables, fruit, milk and butter, as well as breakfast pastries, some delicious sweet treats and now for the very first time in 130 years, our core ingredients - our famous PAUL flour and yeast so you can truly enjoy the taste of PAUL at home.  
+				a(href="#call-form-popup" data-effect="mfp-move-horizontal").link-dark.reserve__link.js-call-form-popup reserve
+	// end reserve
+	// begin features
+	.features
+		.features__in
+			//begin features__item
+			.features__item
+				.features__img
+					img(src="./assets/images/features/1.png", alt="")
+				.features__title.wow.fadeInUp(data-wow-duration="0.5s") Quality at Heart
+				.features__text.wow.fadeInUp(data-wow-duration="1s") 
+					p Delivering the highest standard in all we do
+			//end features__item
+			//begin features__item
+			.features__item
+				.features__img
+					img(src="./assets/images/features/2.png", alt="")
+				.features__title.wow.fadeInUp(data-wow-duration="0.5s") Passion for Bread
+				.features__text.wow.fadeInUp(data-wow-duration="1s")
+					p Freshly baked everyday all year round
+			//end features__item
+			//begin features__item
+			.features__item
+				.features__img
+					img(src="./assets/images/features/3.png", alt="")
+				.features__title.wow.fadeInUp(data-wow-duration="0.5s") French Tradition
+				.features__text.wow.fadeInUp(data-wow-duration="1s") 
+					p Taste of France at your local bakery
+			//end features__item
+			//begin features__item
+			.features__item
+				.features__img
+					img(src="./assets/images/features/4.png", alt="")
+				.features__title.wow.fadeInUp(data-wow-duration="0.5s") Family-Owned Company
+				.features__text.wow.fadeInUp(data-wow-duration="1s") 
+					p Established since 1889, read our story here
+			//end features__item
+	// end features
+
+block footer
+	footer.footer
+		include ../includes/footer.pug
+
+block header
+	header.header
+		include ../includes/header.pug
+

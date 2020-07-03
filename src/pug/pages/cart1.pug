@@ -1,0 +1,139 @@
+extends ../layout/main
+block variable
+block meta
+	title= 'Home'
+	meta(name='description', content='')
+block head
+		link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+	script(src='./assets/scripts/index.js')
+block content
+	.cart
+		.cart__in
+			.cart__left
+				.cart__title Your Basket (1 item)
+				.cart__subtitle
+					<svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M8.84965 5.12542H8.14291V3.30326C8.14291 2.42718 7.79489 1.58698 7.17541 0.967502C6.55593 0.348021 5.71573 0 4.83965 0C3.96358 0 3.12338 0.348021 2.5039 0.967502C1.88442 1.58698 1.5364 2.42718 1.5364 3.30326V5.12542H0.829655C0.609617 5.12542 0.398591 5.21283 0.243 5.36843C0.0874098 5.52402 0 5.73504 0 5.95508V11.6705C0 11.8905 0.0874098 12.1015 0.243 12.2571C0.398591 12.4127 0.609617 12.5001 0.829655 12.5001H8.84965C8.95861 12.5001 9.06649 12.4787 9.16715 12.437C9.26781 12.3953 9.35927 12.3342 9.43631 12.2571C9.51335 12.1801 9.57446 12.0886 9.61616 11.988C9.65785 11.8873 9.67931 11.7794 9.67931 11.6705V5.95508C9.67931 5.84613 9.65785 5.73824 9.61616 5.63758C9.57446 5.53693 9.51335 5.44547 9.43631 5.36843C9.35927 5.29138 9.26781 5.23027 9.16715 5.18858C9.06649 5.14688 8.95861 5.12542 8.84965 5.12542ZM2.3046 3.30326C2.3046 2.63092 2.57168 1.98612 3.0471 1.5107C3.52251 1.03528 4.16732 0.768199 4.83965 0.768199C5.51199 0.768199 6.1568 1.03528 6.63221 1.5107C7.10763 1.98612 7.37471 2.63092 7.37471 3.30326V5.12542H2.3046V3.30326ZM5.22375 9.35974C5.22534 9.38225 5.22534 9.40483 5.22375 9.42734V10.3492C5.22375 10.451 5.18329 10.5487 5.11125 10.6208C5.03922 10.6928 4.94152 10.7333 4.83965 10.7333C4.73779 10.7333 4.64009 10.6928 4.56806 10.6208C4.49602 10.5487 4.45556 10.451 4.45556 10.3492V9.42734C4.45397 9.40483 4.45397 9.38225 4.45556 9.35974C4.2111 9.27087 4.00578 9.0987 3.87566 8.87348C3.74554 8.64825 3.69895 8.38438 3.74407 8.12822C3.78919 7.87205 3.92313 7.63998 4.12237 7.47277C4.32161 7.30555 4.5734 7.2139 4.83351 7.2139C5.09362 7.2139 5.34541 7.30555 5.54464 7.47277C5.74388 7.63998 5.87783 7.87205 5.92295 8.12822C5.96807 8.38438 5.92147 8.64825 5.79136 8.87348C5.66124 9.0987 5.45592 9.27087 5.21146 9.35974H5.22375Z" fill="#131108"/>
+					</svg>
+					span Your order will be processed in a secure environment.
+				.cart__table
+					.checkout-product
+						.checkout-product__head
+							.checkout-product__col.item Item
+							.checkout-product__col.price UNIT PRICE
+							.checkout-product__col.sum SUBTOTAL price
+						.checkout-product__field.card-item
+							.checkout-product__col
+								.checkout-product__block
+									a(href="./").card-item__img
+										img(src="./assets/images/basket/item1.png", alt="")
+									.card-item__info
+										.card-item__title Summer Berry Layer Cake
+										.card-item__choose
+											.choose.js-choose(data-max-number="20")
+												button.choose__minus.js-choose-minus(type="button") -
+												input(type="text" align="center" value="1").choose__input
+												button.choose__plus.js-choose-plus(type="button") +
+										.card-item__links
+											a(href="./").card-item__link.product-link Edit Item
+											a(href="./").card-item__link.product-link Remove Item
+							.checkout-product__col
+								.card-item__price
+									p 59
+										span ₴
+							.checkout-product__col
+								.card-item__price
+									p 59
+										span ₴
+				.card__coupon.coupon
+					form.coupon__row.main-form.main-form__wrap#js-form-applay1
+						.coupon__field.requaired
+							input(name="text" type="text" placeholder="Enter discout code" data-rule="empty").coupon__input.main-form__input.main-form__input-requaired
+						button.coupon__btn.btn Applay
+					//- form.coupon__row.main-form.main-form__wrap#js-form-applay2
+					//- 	.coupon__field.requaired
+					//- 		input(name="text" type="text" placeholder="Use Gift Voucher" data-rule="empty").coupon__input.main-form__input.main-form__input-requaired
+					//- 	button.coupon__btn.btn Applay
+			.cart__right
+				.cart-delivery
+					.cart-delivery__head
+						.cart-delivery__col
+							.cart-delivery__title Store Collection
+						.cart-delivery__col
+							.cart-delivery__title Home Delivery
+					.cart-delivery__info
+						.cart-delivery__col
+							.cart-delivery__content
+								.cart-delivery__adress PAUL  Gorodetskogo
+								.cart-delivery__link Choose another store
+						.cart-delivery__col
+							.cart-delivery__content
+								.cart-delivery__adress Kiev, Ukraine
+					.cart-delivery__item
+						.cart-delivery__col
+							.cart-delivery__delivery
+								<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6 0C2.69147 0 0 2.69147 0 6C0 9.30853 2.69147 12 6 12C9.30853 12 12 9.30853 12 6C12 2.69147 9.30853 0 6 0ZM9.04102 4.72852L5.79099 7.97845C5.69348 8.07596 5.56549 8.12503 5.4375 8.12503C5.30951 8.12503 5.18152 8.07596 5.08401 7.97845L3.45905 6.35349C3.26349 6.15802 3.26349 5.84198 3.45905 5.64651C3.65451 5.45096 3.97046 5.45096 4.16602 5.64651L5.4375 6.918L8.33405 4.02155C8.52951 3.82599 8.84546 3.82599 9.04102 4.02155C9.23648 4.21701 9.23648 4.53296 9.04102 4.72852Z" fill="#131108"/>
+								</svg>
+								.cart-delivery__delivery-text
+									p Order now, collect from 22/06
+						.cart-delivery__col
+							.cart-delivery__delivery
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M13.2426 4.75729C10.9032 2.4178 7.09685 2.4178 4.75736 4.75729C2.41787 7.09677 2.41787 10.9031 4.75736 13.2426C7.09685 15.5821 10.9032 15.5821 13.2426 13.2426C15.5821 10.9031 15.5821 7.09677 13.2426 4.75729ZM10.5026 11.2096L9 9.70699L7.49738 11.2096C7.30219 11.4048 6.9855 11.4048 6.79031 11.2096C6.59513 11.0144 6.59513 10.6977 6.79031 10.5026L8.29294 8.99993L6.79031 7.49731C6.59513 7.30212 6.59513 6.98543 6.79031 6.79024C6.9855 6.59506 7.30219 6.59506 7.49738 6.79024L9 8.29287L10.5026 6.79024C10.6978 6.59506 11.0145 6.59506 11.2097 6.79024C11.4049 6.98543 11.4049 7.30212 11.2097 7.49731L9.70706 8.99993L11.2097 10.5026C11.4049 10.6977 11.4049 11.0144 11.2097 11.2096C11.0145 11.4048 10.6978 11.4048 10.5026 11.2096Z" fill="#131108"/>
+								</svg>
+								.cart-delivery__delivery-text
+									p Not eligible for delivery
+					.cart-delivery__btns
+						.cart-delivery__col
+							.cart-delivery__btn
+								button.link-dark.link-dark_sm COLLECTION CHECKOUT
+						.cart-delivery__col
+							.cart-delivery__btn
+								button.link-dark.link-dark_sm(disabled="disabled") delivery checkout
+				.cart-summary
+					.cart-summary__title
+						<svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8.84965 5.12542H8.14291V3.30326C8.14291 2.42718 7.79489 1.58698 7.17541 0.967502C6.55593 0.348021 5.71573 0 4.83965 0C3.96358 0 3.12338 0.348021 2.5039 0.967502C1.88442 1.58698 1.5364 2.42718 1.5364 3.30326V5.12542H0.829655C0.609617 5.12542 0.398591 5.21283 0.243 5.36843C0.0874098 5.52402 0 5.73504 0 5.95508V11.6705C0 11.8905 0.0874098 12.1015 0.243 12.2571C0.398591 12.4127 0.609617 12.5001 0.829655 12.5001H8.84965C8.95861 12.5001 9.06649 12.4787 9.16715 12.437C9.26781 12.3953 9.35927 12.3342 9.43631 12.2571C9.51335 12.1801 9.57446 12.0886 9.61616 11.988C9.65785 11.8873 9.67931 11.7794 9.67931 11.6705V5.95508C9.67931 5.84613 9.65785 5.73824 9.61616 5.63758C9.57446 5.53693 9.51335 5.44547 9.43631 5.36843C9.35927 5.29138 9.26781 5.23027 9.16715 5.18858C9.06649 5.14688 8.95861 5.12542 8.84965 5.12542ZM2.3046 3.30326C2.3046 2.63092 2.57168 1.98612 3.0471 1.5107C3.52251 1.03528 4.16732 0.768199 4.83965 0.768199C5.51199 0.768199 6.1568 1.03528 6.63221 1.5107C7.10763 1.98612 7.37471 2.63092 7.37471 3.30326V5.12542H2.3046V3.30326ZM5.22375 9.35974C5.22534 9.38225 5.22534 9.40483 5.22375 9.42734V10.3492C5.22375 10.451 5.18329 10.5487 5.11125 10.6208C5.03922 10.6928 4.94152 10.7333 4.83965 10.7333C4.73779 10.7333 4.64009 10.6928 4.56806 10.6208C4.49602 10.5487 4.45556 10.451 4.45556 10.3492V9.42734C4.45397 9.40483 4.45397 9.38225 4.45556 9.35974C4.2111 9.27087 4.00578 9.0987 3.87566 8.87348C3.74554 8.64825 3.69895 8.38438 3.74407 8.12822C3.78919 7.87205 3.92313 7.63998 4.12237 7.47277C4.32161 7.30555 4.5734 7.2139 4.83351 7.2139C5.09362 7.2139 5.34541 7.30555 5.54464 7.47277C5.74388 7.63998 5.87783 7.87205 5.92295 8.12822C5.96807 8.38438 5.92147 8.64825 5.79136 8.87348C5.66124 9.0987 5.45592 9.27087 5.21146 9.35974H5.22375Z" fill="#131108"/>
+						</svg>
+						span Safe Checkout
+					.cart-summary__subtitle Choose how your want this order to be completed
+					.cart-summary__info
+						.cart-summary__row
+							.cart-summary__name Subtotal
+							.cart-summary__number 59
+								span ₴
+						.cart-summary__row
+							.cart-summary__name Shipping
+							.cart-summary__number 00
+								span ₴
+						.cart-summary__row
+							.cart-summary__name Tax
+							.cart-summary__number 15
+								span ₴
+						.cart-summary__row
+							.cart-summary__name Order Total
+							.cart-summary__number 59
+								span ₴
+					.cart-payments
+						.cart-payments__item
+							img(src="./assets/images/basket/visa.svg", alt="")
+						.cart-payments__item
+							img(src="./assets/images/basket/master.svg", alt="")
+						.cart-payments__item
+							img(src="./assets/images/basket/pay.svg", alt="")
+						.cart-payments__item
+							img(src="./assets/images/basket/privat.svg", alt="")
+
+
+
+
+block footer
+	footer.footer
+		include ../includes/footer.pug
+
+block header
+	header.header
+		include ../includes/header.pug
+

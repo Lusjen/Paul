@@ -1,0 +1,44 @@
+extends ../layout/main
+block variable
+	-
+		var titlePage = 'Depuis 1889';
+		var crumbs = [
+			{
+				title: 'Home',
+				link: pagesLink[0].home
+			}
+		];
+block meta
+	title= 'Depuis 1889'
+	meta(name='description', content='')
+block head
+		link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+	script(src='./assets/scripts/index.js')
+	//- script(src='./assets/scripts/main.js')
+block content
+	.wrap
+		include ../includes/crumbs.pug
+		// story
+		.story
+			.story__img
+				.story__img-in
+					img(src="./assets/images/story/bg.png", alt="")
+			.story__info
+				.story__title.title-md.title-md_before-center.wow.fadeInUp(data-wow-duration="1s") The PAUL Story
+				.story__text.text.wow.fadeInUp(data-wow-duration="1s")
+					p Our key pillars to a Sustainable future. For five generations, PAUL has played a crucial role in the community, recognising the importance of protecting the environment and bringing quality products to people all over the world. It is now, even more important to us that we take the lead in these areas so that whatever we do, we continue to play our part in building a sustainable future for our customers as well as our teams.
+				.story__text.text.text_font.text_quote.wow.fadeInUp(data-wow-duration="1.3s")
+					p For five generations, PAUL has played a crucial role in the community, recognising the importance of protecting the environment and bringing quality products to people all over the world
+				.story__text.text.wow.fadeInUp(data-wow-duration="1.6s")
+					p Despite an ever changing landscape we have identified four key pillars that we would like to think our customers and teams hold us to account for. Each pillar comes with its own plan and vision that continues to evolve as time goes on. Find out more about what we are doing and the impact our work is making.
+				a(href="#call-form-popup" data-effect="mfp-move-horizontal").link-dark.story__link.js-call-form-popup reserve
+	
+block footer
+	footer.footer
+		include ../includes/footer.pug
+
+block header
+	header.header
+		include ../includes/header.pug
+

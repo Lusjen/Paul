@@ -1,0 +1,79 @@
+div(class="call-form-popup mfp-with-anim mfp-hide" id="call-form-popup")
+	div(class="call-form-popup__in")
+		.form-wrap
+			button(type="button" class="form-close js-close-btn")
+				//- +svg('close-popup')
+				img( src="./assets/images/close-popup.svg")
+			.form-wrap__left
+				.wrap
+					.form-wrap__title.fadeInLeft Reserve
+					//- p.form-popup__descr Наши менеджеры перезвонят вам в кротчайшие сроки
+				form.main-form.call-form#js-call-form
+					.amount-group
+						.choose.js-choose(data-max-number="20")
+							button.choose__minus.js-choose-minus(type="button") -
+							input(type="text" align="center" value="1" readonly="").choose__input
+							button.choose__plus.js-choose-plus(type="button") +
+					.main-form__row
+						.main-form__date
+							.main-form__name Date:
+							.main-form-block
+								input(type="text" autocomplete="off" value="18.05.2019").main-form__input.datetimepicker
+								span.main-form__icon
+									+svg('calendar')
+								//- span(data-type="name" data-defaultMessage="Ваше ім’я:**" data-errorMessage="Ім’я:* не заповнено:").main-form-content
+								//- 	span.main-form__text Ім’я:*
+						.main-form__time
+							.main-form__name Time:
+							.radio-group
+								//- input(class="checkedtimeRadio" type="radio" name="checkedtime") 
+								//- label(for="radio") Вказати зручний час
+								select(class="checkedtime")
+									option(value="18:00") 18.00
+									option(value="10:00") 9:00
+									option(value="10:00") 10:00
+									option(value="11:00") 11:00
+									option(value="12:00") 12:00
+									option(value="13:00") 13:00
+									option(value="14:00") 14:00
+									option(value="15:00") 15:00
+					.main-form__name Name and surname:*
+					.main-form-block.requaired
+						input(name="name" type="text" data-rule="empty").main-form__input.main-form__input-requaired
+						//- span(data-type="name" data-defaultMessage="Ваше ім’я:**" data-errorMessage="Ім’я:* не заповнено:").main-form-content
+						//- 	span.main-form__text Ім’я:*
+					.main-form__name Phone number:*
+					.main-form-block.requaired
+						input(name="tel" type="text" data-rule="empty").main-form__input.main-form__input-requaired.inputtelmask
+						//- span(data-type="tel" data-defaultMessage="Ваш телефон*" data-errorMessage="Телефон:* не заповнений:").main-form-content
+						//- 	span.main-form__text Телефон*
+					.main-form__name E-mail:*
+					.main-form-block.requaired
+						input(name="mail" type="text" data-rule="empty").main-form__input.main-form__input-requaired
+						//- span(data-type="tel" data-defaultMessage="Ваш телефон*" data-errorMessage="E-mail:* не заповнений:").main-form-content
+						//- 	span.main-form__text Телефон*
+					//- .radio-group
+					//- 	input(type="radio" name="checkedtime")
+					//- 	label(for="radio") Зателефонуйте зараз
+					//- .radio-group
+					//- 	input(class="checkedtimeRadio" type="radio" name="checkedtime") 
+					//- 	label(for="radio") Вказати зручний час
+					//- 	select(class="checkedtime")
+					//- 		option(value="") Оберіть зручний час
+					//- 		option(value="10:00") 9:00
+					//- 		option(value="10:00") 10:00
+					//- 		option(value="11:00") 11:00
+					//- 		option(value="12:00") 12:00
+					//- 		option(value="13:00") 13:00
+					//- 		option(value="14:00") 14:00
+					//- 		option(value="15:00") 15:00
+					//- .response-span
+					button.call-form__button.read-more-block.link-dark.link-dark_italic.reserve__link Send
+					//- a(href="").link-dark.reserve__link
+						//- <svg width="65" height="55" viewBox="0 0 65 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+						//- 	<path d="M37.3915 52.8548C35.6623 46.1978 32.6728 40.809 28.3859 36.5761C24.0368 32.2818 18.3778 29.2023 11.4079 27.1816C18.2196 25.2171 23.7273 22.1559 28.024 17.9356C32.3278 13.7084 35.3935 8.34095 37.3475 1.80424C39.3813 8.27952 42.4475 13.6552 46.6505 17.9018C50.8454 22.1401 56.1532 25.2337 62.6498 27.1806C56.0965 29.1468 50.6477 32.2171 46.3921 36.5126C42.1874 40.7568 39.169 46.1756 37.3915 52.8548Z" fill="#F7D323" stroke="#F7D323"/>
+						//- 	<path class="arrow-svg" d="M37.569 23.2671L36.881 23.9671L39.6082 26.7671H0V27.7671H39.6082L36.881 30.5671L37.569 31.2671L41.5 27.2671L37.569 23.2671Z" fill="#072146"/>
+						//- </svg>
+						span(class="read-more-block__text read-more-block__text_dark ") Відправити
+			.form-wrap__right
+				img(src="./assets/images/reserve/bg.png", alt="")

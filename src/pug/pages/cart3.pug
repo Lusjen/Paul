@@ -1,0 +1,97 @@
+extends ../layout/main
+block variable
+block meta
+	title= 'Home'
+	meta(name='description', content='')
+block head
+		link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+	script(src='./assets/scripts/index.js')
+	script(src='./assets/scripts/cart2.js')
+block content
+	.payment
+		.payment__in
+			.payment__left
+				.payment__top
+					.payment__block-title 
+						.payment__title Payment Details
+					.payment__form
+						form.main-form.main-form__wrap#js-form-pay
+							.main-form__left
+								.radio-group
+									input(type="radio" name="checkedtime" class="check")
+									label(for="radio" data-pay="Pay with visa")
+										img(src="./assets/images/basket/payment/visa.svg", alt="")
+								.radio-group
+									input(type="radio" name="checkedtime" class="check")
+									label(for="radio" data-pay="Pay with mastercard")
+										img(src="./assets/images/basket/payment/master.svg", alt="")
+								.radio-group
+									input(type="radio" name="checkedtime" class="check")
+									label(for="radio" data-pay="Pay with pay")
+										img(src="./assets/images/basket/payment/pay.svg", alt="")
+								.radio-group
+									input(type="radio" name="checkedtime" class="check")
+									label(for="radio" data-pay="Pay with privat")
+										img(src="./assets/images/basket/payment/privat.svg", alt="")
+							.main-form__right
+								.main-form__button.is-hidden.js-pay
+									button.link-dark.js-pay-link Pay with mastercard
+			.payment__right
+				.order-summery
+					.order-summery__head
+						.order-summery__head-left
+							.order-summery__title Your Order Summary
+							.order-summery__subtitle
+								span.order-summery__number 1
+								span Item in your basket
+						.order-summery__head-right
+							a(href="./").product-link Edit Basket
+					.order-summery__items
+						//begin product
+						.product.product__line
+							a(href="./").product__img.product__img_sm
+								img(src="./assets/images/basket/item1.png", alt="")
+							.product__info
+								.product__top
+									.product__name Summer Berry Layer Cake
+									.product__price 59 
+										span ₴
+								.product__center.product__center_bc
+									.product__quantity-name Quantity:
+									.product__quantity 1
+						//end product
+					ul.order-summery__time-details
+						li Collection Date: 
+							span Monday, 22 June 2020
+						li Collection Time: 
+							span 10:00 - 11:00
+					ul.order-summery__adress-details
+						li Collection Address:
+							span Piccadilly Arcade
+						li Collection Store Name:
+							span PAUL Piccadilly
+ 
+
+					.order-info
+						.order-info__row
+							.order-info__name Cart Subtotal
+							.order-info__number 59 
+									span ₴
+						.order-info__row
+							.order-info__name Tax
+							.order-info__number 59 
+									span ₴
+						.order-info__row
+							.order-info__name Order Total
+							.order-info__number 59 
+									span ₴
+
+block footer
+	footer.footer
+		include ../includes/footer.pug
+
+block header
+	header.header
+		include ../includes/header.pug
+

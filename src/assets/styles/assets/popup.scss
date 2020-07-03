@@ -1,0 +1,234 @@
+.form-wrap	{
+	position: relative;
+	width: 676px;
+	display: flex;
+	margin: 0 auto;
+	@include to(767px) {
+		// width: 265px;
+		width: 86%;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		left: 20px;
+		right: 20px;
+		top: 20px;
+		bottom: 20px;
+		pointer-events: none;
+		border: 1px solid rgba(146, 137, 125, 0.5);
+		@include to(767px) {
+			content: none;
+		}
+	}
+	&__right {
+		width: 50%;
+		background: $apricot;
+		padding: 20px;
+		display: flex;
+		align-items: center;
+		@include to(767px) {
+			display: none;
+		}
+	}
+	&__left {
+		width: 50%;
+		background: $cream;
+		padding: 58px 42px;
+		@include to(767px) {
+			width: 100%;
+			padding: 29px;
+		}
+	}
+	&__title {
+		font-size: 44px;
+		color: #212224;
+		line-height: 1.2;
+		margin-bottom: 10px;
+		@include to(1200px) {
+			font-size: 36px;
+		}
+		@include to(767px) {
+			font-size: 30px;
+		}
+	}
+}
+
+.main-form {
+	max-width: 192px;
+	@include to(767px) {
+		max-width: 100%;
+	}
+	&__input {
+		height: 34px;
+		width: 100%;
+		border: none;
+		padding-left: 10px;
+		color: $text;
+		font-family: $default-font2;
+		border: 1px solid $lightGray;
+	}
+	&__name {
+		color: $text;
+		font-family: $default-font2;
+	}
+	&__row {
+		display: flex;
+		-webkit-justify-content: space-between;
+		        justify-content: space-between;
+	}
+	&__date {
+		width: 105px;
+	}
+	&__time{
+		width: 67px;
+	}
+	&__icon {
+		position: absolute;
+		right: 12px;
+		top: 50%;
+		transform: translateY(-50%);
+		svg {
+			width: 8px;
+			height: 9px;
+		}
+	}
+	&__wrap {
+		max-width: 100%;
+		display: flex;
+		align-items: center;
+		@include to(1200px) {
+			display: block;
+		}
+	}
+	&__in {
+		max-width: 276px;
+		width: 100%;
+		@include to(767px) {
+			max-width: 100%;
+		}
+	}
+	&__left {
+		margin-right: 121px;
+		@include to(1200px) {
+			margin-bottom: 50px;
+		}
+		@include to(767px) {
+			border-left: 1px solid $lightGray;
+			border-bottom: 1px solid $lightGray;
+			border-right: 1px solid $lightGray;
+			padding: 30px 36px 50px;
+			margin-right: 0;
+			margin-bottom: 15px;
+		}
+
+	}
+	&__button {
+		width: 192px;
+		@include to(767px) {
+			width: 100%;
+		}
+	}
+}
+
+.main-form-block {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.main-form-content {
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.form-close {
+	position: absolute;
+	right: 40px;
+	top: 40px;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	-webkit-transition: all 0.5s;
+	   -moz-transition: all 0.5s;
+	    -ms-transition: all 0.5s;
+	     -o-transition: all 0.5s;
+	        transition: all 0.5s;
+	&:hover {
+		transform: rotate(180deg);
+	}
+	@include to(767px) {
+		right: 15px;
+		top: 20px;
+	}
+}
+
+.call-form-popup .mfp-close {
+    display: none;
+}
+
+.call-form__button {
+	margin-top: 25px;
+	width: 192px;
+	@include to(767px) {
+		width: 100%;
+	}
+}
+
+.choose__minus, .choose__plus {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    position: relative;
+	color: $text;
+	width: 33px;
+	height: 33px;
+	border: 1px solid $lightGray;
+    background-color: transparent;
+}
+
+.choose {
+	display: flex;
+	font-size: 0;
+}
+
+.choose__input {
+    width: 33px;
+    height: 33px;
+    color: $text;
+    text-align: center;
+    font-family: $default-font2;
+    font-size: 12px;
+    border-top: 1px solid $lightGray;
+    border-bottom: 1px solid $lightGray;
+    border-right: none;
+    border-left: none;
+    background-color: transparent;
+}
+
+.amount-group {
+	margin-bottom: 10px;
+}
+
+.checkedtime {
+	height: 34px;
+	width: 100%;
+	border: none;
+	padding-left: 10px;
+	border: 1px solid #E2E2E2;
+	color: $text;
+	font-family: $default-font2;
+	margin: 0;      
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: url('../images/arrow-select.svg') no-repeat;
+	background-position: 90% 50%;
+	option {
+		color: $text;
+	}
+}

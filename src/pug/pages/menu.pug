@@ -1,0 +1,107 @@
+extends ../layout/main
+block variable
+	-
+		var titlePage = 'Menu';
+		var crumbs = [
+			{
+				title: 'Home',
+				link: pagesLink[0].home
+			}
+		];
+block meta
+	title= 'Home'
+	meta(name='description', content='')
+block head
+		link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+	script(src='./assets/scripts/index.js')
+block content
+	div(class="item-popup mfp-with-anim mfp-hide" id="item1")
+		.item-popup
+			img(src="./assets/images/menu/1.jpg", alt="")
+		button(type="button" class="form-close js-close-btn")
+			img( src="./assets/images/close-popup.svg")
+	div(class="item-popup mfp-with-anim mfp-hide" id="item2")
+		.item-popup
+			img(src="./assets/images/logo.png", alt="")
+		button(type="button" class="form-close js-close-btn")
+			img( src="./assets/images/close-popup.svg")
+	div(class="item-popup mfp-with-anim mfp-hide" id="item3")
+		.item-popup
+			img(src="./assets/images/menu/1.jpg", alt="")
+		button(type="button" class="form-close js-close-btn")
+			img( src="./assets/images/close-popup.svg")
+	div(class="item-popup mfp-with-anim mfp-hide" id="item4")
+		.item-popup
+			img(src="./assets/images/menu/1.jpg", alt="")
+		button(type="button" class="form-close js-close-btn")
+			img( src="./assets/images/close-popup.svg")
+
+
+	include ../includes/crumbs.pug
+	// begin products-menu
+	.menu-list
+		//begin gallery-products__item
+		a(href="#item1" data-effect="mfp-move-horizontal").menu-list__item.wow.fadeIn(data-wow-duration="2s").js-item1
+			.menu-item-big
+				.menu-item-big__in
+				.menu-item-big__logo
+					img(src="./assets/images/logo-menu.svg", alt="")
+				.menu-item-big__title Breakfast
+				.menu-item-big__row
+					.menu-item-big__day Saturday - SUNDAY
+					.menu-item-big__time 9:00 - 21:00
+				.menu-item-big__row
+					.menu-item-big__day Saturday - SUNDAY
+					.menu-item-big__time 9:00 - 21:00
+				.menu-item-big__link view menu
+				
+		//end menu-list__item
+		//begin menu-list__item
+		a(href="#item2" data-effect="mfp-move-horizontal").menu-list__item.wow.fadeIn(data-wow-duration="3s").js-item2
+			.menu-item-big
+				.menu-item-big__in
+				.menu-item-big__logo
+					img(src="./assets/images/logo-menu.svg", alt="")
+				.menu-item-big__title A la carte
+				.menu-item-big__row
+					.menu-item-big__day Monday - Friday
+					.menu-item-big__time 8:00 - 12:00
+				.menu-item-big__row
+					.menu-item-big__day Saturday - SUNDAY
+					.menu-item-big__time 9:00 - 21:00
+				.menu-item-big__link view menu
+		//end menu-list__item
+		//begin menu-list__item
+		a(href="#item3" data-effect="mfp-move-horizontal").menu-list__item.wow.fadeIn(data-wow-duration="4s").js-item3
+			.menu-item-big
+				.menu-item-big__in
+				.menu-item-big__logo
+					img(src="./assets/images/logo-menu.svg", alt="")
+				.menu-item-big__title Drinks
+				.menu-item-big__row
+					.menu-item-big__day Monday - Friday
+					.menu-item-big__time 8:00 - 12:00
+				.menu-item-big__row
+					.menu-item-big__day Saturday - SUNDAY
+					.menu-item-big__time 9:00 - 21:00
+				.menu-item-big__link view menu
+		//end menu-list__item
+		//begin menu-list__item
+		a(href="#item4" data-effect="mfp-move-horizontal").menu-list__item.menu-list__item-last.wow.fadeIn(data-wow-duration="5s").js-item4
+			.menu-item-big-last
+				.menu-item-big-last__in
+				.menu-item-big-last__logo
+					img(src="./assets/images/logo-blue-round.svg", alt="")
+			//- img(src="./assets/images/logo-blue.png", alt="")
+		//end menu-list__item
+
+
+block footer
+	footer.footer
+		include ../includes/footer.pug
+
+block header
+	header.header
+		include ../includes/header.pug
+

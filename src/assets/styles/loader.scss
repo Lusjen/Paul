@@ -1,0 +1,43 @@
+.loader-wrap {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background: $apricot;
+    svg {
+    	width: 180px;
+    	.p {
+    		opacity: 0;
+			animation: dash 0.5s linear forwards;
+    	}
+    	.a {
+    		opacity: 0;
+			animation: dash 0.5s linear 0.8s forwards;
+    	}
+    	.u {
+	        opacity: 0;
+			animation: dash 0.5s linear 1.2s forwards;
+    	}
+    	.l {
+    		opacity: 0;
+			animation: dash 0.5s linear 1.7s forwards;
+    	}
+    	.logo-subtitle {
+    		opacity: 0;
+    		animation: dash 0.5s linear 2.5s forwards;
+    	}
+    }
+}
+
+
+@keyframes dash {
+  to {
+    opacity: 1;
+  }
+}
+

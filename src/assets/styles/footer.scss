@@ -1,0 +1,186 @@
+.footer {
+	background: $darkBlack;
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		max-width: 1092px;
+		padding: 60px 45px 94px;
+		margin: 0 auto;
+		@include to(767px) {
+			-webkit-flex-wrap: wrap;
+			    -ms-flex-wrap: wrap;
+			        flex-wrap: wrap;
+		    padding: 35px 45px;
+		}
+	}
+	&__logo {
+		max-width: 140px;
+		@include to(1200px) {
+			max-width: 104px;
+		}
+		@include to(767px) {
+			margin: 0 auto 30px;
+		}
+		img {
+			display: block;
+			max-width: 100%;
+		}
+	}
+	&__name {
+		color: $cream;
+		font-size: 16px;
+		margin-bottom: 5px;
+		@include to(767px) {
+			text-align: center;
+			font-size: 14px;
+		}
+	}
+	&__row {
+		display: flex;
+		margin-bottom: 5px;
+		@include to(767px) {
+			-webkit-justify-content: center;
+			        justify-content: center;
+		}
+	}
+	&__adress {
+		@include to(767px) {
+			margin-bottom: 30px;
+			justify-content: center;
+			width: 100%;
+		}
+	}
+	&__adress-icon svg {
+		width: 9px;
+		height: 9px;
+	}
+	&__adress-name {
+		font-family: $default-font2;
+		color: #9E9F9C;
+		margin-left: 10px;
+	}
+	&__icons {
+		display: flex;
+		justify-content: space-between;
+		@include to(767px) {
+			justify-content: center;
+		}
+	}
+	&__soc-icons {
+		position: relative;
+		@include to(767px) {
+			padding: 20px 0;
+			order: 1;
+			width: 50%;
+			-webkit-justify-content: center;
+			        justify-content: center;
+		}
+		.footer__name {
+			@include to(767px) {
+				display: none;
+			}
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			left: -60px;
+			width: 1px;
+			height: 102px;
+			background: #333333;
+			@include to(1200px) {
+				content: none;
+			}
+			@include to(767px) {
+				content: '';
+				left: 0;
+				top: 0;
+				height: 60px;
+			}
+		}
+	}
+	&__icon:not(:last-child){
+		margin-right: 12px;
+	}
+	&__lang-item {
+		color: $darkGray;
+		text-decoration: none;
+		font-size: 15px;
+		@include to(767px) {
+			font-size: 14px;
+		}
+		&.active {
+			color: $cream;
+			border-bottom: 1px solid $cream;
+		}
+	}
+	&__lang-item:not(:last-child) {
+		margin-right: 10px;
+	}
+	&__center {
+		height: 1px;
+		max-width: 1110px;
+		width: 100%;
+		margin: 0 auto;
+		background: #333333;
+		@include to(1200px) {
+			width: 88%;
+		}
+	}
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		padding: 15px 45px;
+		max-width: 1092px;
+		margin: 0 auto;
+		@include to(767px) {
+			display: block;
+			padding: 30px 45px 20px;
+		}
+	}
+	&__payments {
+		display: flex;
+		align-items: center;
+		@include to(767px) {
+			-webkit-justify-content: space-between;
+			        justify-content: space-between;
+		    margin-bottom: 12px;
+		}
+	}
+	&__payments-item {
+		margin-right: 35px;
+		@include to(767px) {
+			margin-right: 0;
+		}
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		color: $darkGray;
+		font-family: $default-font2;
+		font-size: 12px;
+		@include to(1200px) {
+			font-size: 10px;
+		}
+		@include to(767px) {
+			-webkit-justify-content: center;
+			        justify-content: center;
+		}
+		span {
+			flex-shrink: 0;
+			margin-right: 15px;
+		}
+		img {
+			@include to(767px) {
+				width: 43px;
+			}
+		}
+	}
+	&__lang {
+		@include to(767px) {
+			width: 50%;
+			text-align: center;
+			padding: 20px 0;
+		}
+	}
+}

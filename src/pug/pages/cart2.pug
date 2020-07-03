@@ -1,0 +1,217 @@
+extends ../layout/main
+block variable
+block meta
+	title= 'Home'
+	meta(name='description', content='')
+block head
+		link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+	script(src='./assets/scripts/index.js')
+	script(src='./assets/scripts/cart2.js')
+block content
+	.date-time
+		form.date-time__in#js-form-contact
+			.date-time__left
+				.date-time__top
+					.date-time__block-title 
+						.date-time__title Store Collection Date & Time
+					.date-time__form
+						.date-time__adress 
+							p.gray Store Collection
+							p PAUL  Gorodetskogo
+						.date-time__slider-month
+							.slider-month
+								.js-slider-month
+									.slider-month__item(data-month="062020") June, 2020
+									.slider-month__item(data-month="072020") July, 2020
+									.slider-month__item(data-month="082020") August, 2020
+								.slider-month__btns
+									.slider-month__btn-prev
+										.btn-prev
+											<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="15" cy="15" r="14.7013" stroke="#92897D" stroke-width="0.597403"/>
+												<path d="M13 15L16 12.4019L16 17.5981L13 15Z" fill="#92897D"/>
+											</svg>
+									.slider-month__btn-next
+										.btn-next
+											<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="15" cy="15" r="14.7013" transform="rotate(-180 15 15)" stroke="#92897D" stroke-width="0.597403"/>
+												<path d="M17 15L14 17.5981L14 12.4019L17 15Z" fill="#131108"/>
+											</svg>
+						.date-time__slider-date
+							.slider-date
+								.js-slider-date
+									.slider-date__item(data-month="062020")
+										p.slider-date__day Monday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="062020")
+										p.slider-date__day Monday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="062020")
+										p.slider-date__day Tuesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="062020")
+										p.slider-date__day Wednesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="062020")
+										p.slider-date__day Wednesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="062020")
+										p.slider-date__day Monday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="062020")
+										p.slider-date__day Tuesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="062020")
+										p.slider-date__day Wednesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="062020")
+										p.slider-date__day Wednesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="072020")
+										p.slider-date__day Monday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="072020")
+										p.slider-date__day Tuesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="072020")
+										p.slider-date__day Wednesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="072020")
+										p.slider-date__day Monday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="072020")
+										p.slider-date__day Tuesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="072020")
+										p.slider-date__day Wednesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="072020")
+										p.slider-date__day Wednesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="072020")
+										p.slider-date__day Wednesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="082020") 
+										p.slider-date__day Wednesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="082020") 
+										p.slider-date__day Wednesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="082020") 
+										p.slider-date__day Wednesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="082020") 
+										p.slider-date__day Wednesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="082020") 
+										p.slider-date__day Wednesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="082020") 
+										p.slider-date__day Wednesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="082020") 
+										p.slider-date__day Wednesday
+										p.slider-date__date 22nd Jun
+									.slider-date__item(data-month="082020") 
+										p.slider-date__day Wednesday
+										p.slider-date__date 22nd Jun
+								.slider-date__btns
+									.slider-date__btn-prev
+										.btn-prev
+											<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 3.5L2.46667 2L2.46667 3.5L2.46667 5L1 3.5Z" fill="#535451"/>
+												<path d="M12 3.5L1 3.5M1 3.5L2.46667 2L2.46667 5L1 3.5Z" stroke="#535451"/>
+											</svg>
+									.slider-date__btn-next
+										.btn-next
+											<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M11 3.5L9.53333 5L9.53333 3.5L9.53333 2L11 3.5Z" fill="#535451"/>
+												<path d="M-6.55671e-08 3.5L11 3.5M11 3.5L9.53333 5L9.53333 2L11 3.5Z" stroke="#535451"/>
+											</svg>
+						.date-time__time
+							.date-time__time-title Available time frames for selected day
+							.date-time__list.time-list
+								.time-item.is-active  10:00 - 11:00
+								.time-item  11:00 - 12:00
+								.time-item  12:00 - 13:00
+								.time-item  13:00 - 14:00
+				.date-time__bottom
+					.date-time__block-title
+						.date-time__title Contact details for collection
+						.date-time__subtitle We’ll use these details to contact you about your order
+					.date-time__form-contact
+						.main-form.main-form__in.call-form
+							.main-form__name Name and surname:*
+							.main-form-block.requaired
+								input(name="name" type="text" data-rule="empty").main-form__input.main-form__input-requaired
+								//- span(data-type="name" data-defaultMessage="Ваше ім’я:**" data-errorMessage="Ім’я:* не заповнено:").main-form-content
+								//- 	span.main-form__text Ім’я:*
+							.main-form__name Phone number:*
+							.main-form-block.requaired
+								input(name="tel" type="text" data-rule="empty").main-form__input.main-form__input-requaired.inputtelmask
+								.field-tooltip
+									<svg width="19" height="54" viewBox="0 0 19 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M19 27C19 32.2467 14.7467 36.5 9.49999 36.5C4.25329 36.5 -7.44691e-06 32.2467 -7.44691e-06 27C-7.44691e-06 21.7533 4.25329 17.5 9.49999 17.5C14.7467 17.5 19 21.7533 19 27Z" fill="#131108"/>
+										<path d="M9.62306 29.476H8.79506C8.69106 29.476 8.63906 29.428 8.63906 29.332C8.63906 28.828 8.73506 28.38 8.92706 27.988C9.11906 27.596 9.35106 27.28 9.62306 27.04C9.89506 26.8 10.1671 26.576 10.4391 26.368C11.0951 25.88 11.4231 25.388 11.4231 24.892C11.4231 24.388 11.2471 23.992 10.8951 23.704C10.5431 23.416 10.0511 23.272 9.41906 23.272C8.79506 23.272 8.31906 23.432 7.99106 23.752C7.67106 24.072 7.50706 24.492 7.49906 25.012C7.49906 25.108 7.45106 25.156 7.35506 25.156H6.59906C6.49506 25.156 6.44306 25.108 6.44306 25.012C6.44306 24.26 6.68706 23.624 7.17506 23.104C7.67106 22.576 8.41506 22.312 9.40706 22.312C10.3991 22.312 11.1631 22.544 11.6991 23.008C12.2431 23.472 12.5151 24.056 12.5151 24.76C12.5151 25.144 12.4471 25.492 12.3111 25.804C12.1751 26.108 12.0071 26.352 11.8071 26.536C11.6071 26.72 11.3871 26.916 11.1471 27.124C10.9071 27.324 10.6871 27.512 10.4871 27.688C10.2871 27.864 10.1191 28.096 9.98306 28.384C9.84706 28.664 9.77906 28.98 9.77906 29.332C9.77906 29.428 9.72706 29.476 9.62306 29.476ZM9.67106 30.508C9.79106 30.628 9.85106 30.776 9.85106 30.952C9.85106 31.128 9.79106 31.276 9.67106 31.396C9.55106 31.524 9.39906 31.588 9.21506 31.588C9.03906 31.588 8.88706 31.524 8.75906 31.396C8.63906 31.276 8.57906 31.128 8.57906 30.952C8.57906 30.776 8.63906 30.628 8.75906 30.508C8.88706 30.38 9.03906 30.316 9.21506 30.316C9.39906 30.316 9.55106 30.38 9.67106 30.508Z" fill="#FFFCF8"/>
+									</svg>
+									.field-tooltip__content
+										.field-tooltip__title Get Delivery Updates
+										p We may also call to discuss extra services and confirm order details. An alternative number helps us reach you.
+
+								//- span(data-type="tel" data-defaultMessage="Ваш телефон*" data-errorMessage="Телефон:* не заповнений:").main-form-content
+								//- 	span.main-form__text Телефон*
+							.main-form__name E-mail:*
+							.main-form-block.requaired
+								input(name="mail" type="text" data-rule="empty").main-form__input.main-form__input-requaired
+
+				.order-summery__btn.btn-tablet
+					button.link-dark PROCEED TO PAYMENT						
+			.date-time__right
+				.order-summery
+					.order-summery__head
+						.order-summery__head-left
+							.order-summery__title Your Order Summary
+							.order-summery__subtitle
+								span.order-summery__number 1
+								span Item in your basket
+						.order-summery__head-right
+							a(href="./").product-link Edit Basket
+					.order-summery__items
+						//begin product
+						.product.product__line
+							a(href="./").product__img.product__img_sm
+								img(src="./assets/images/basket/item1.png", alt="")
+							.product__info
+								.product__top
+									.product__name Summer Berry Layer Cake
+									.product__price 59 
+										span ₴
+								.product__center.product__center_bc
+									.product__quantity-name Quantity:
+									.product__quantity 1
+						//end product
+					.order-info
+						.order-info__row
+							.order-info__name Cart Subtotal
+							.order-info__number 59 
+									span ₴
+						.order-info__row
+							.order-info__name Tax
+							.order-info__number 59 
+									span ₴
+						.order-info__row
+							.order-info__name Order Total
+							.order-info__number 59 
+									span ₴
+					.order-summery__btn
+						button.link-dark PROCEED TO PAYMENT
+
+block footer
+	footer.footer
+		include ../includes/footer.pug
+
+block header
+	header.header
+		include ../includes/header.pug
+
